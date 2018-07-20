@@ -1,0 +1,15 @@
+<div class="panel panel-default" ng-controller="viewController as viewCtrl">
+    <div class="panel-body">
+        <h1>{{viewCtrl.trainee.firstName}} {{viewCtrl.trainee.secondName}}</h1>
+        <h2>Subject Confidence</h2>
+           <div ng-repeat="subject in viewCtrl.trainee.subject">
+            <h3>{{subject.name}}: {{subject.confidence}} </h3>
+          </div>
+        </div>
+
+    <button ng-click="viewCtrl.edit()" class="btn btn-primary">Edit</button>
+    <button ng-click="viewCtrl.delete(viewCtrl.trainee.id)" class="btn btn-danger">Delete</button>
+    <button ng-click="viewCtrl.back()" class="btn btn-warning">Back</button>
+
+
+</div>

@@ -1,0 +1,68 @@
+<div class="panel panel-default" ng-controller="addController as addCtrl">
+    <div class="panel-body">
+
+        <div>
+            <h2>Create Trainee</h2>
+            <div class="form-group">
+                <label for="inputFirstName">First Name</label>
+                <input type="text" class="form-control" id="inputFirstName"placeholder="Enter First Name" ng-model="addCtrl.form.firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="inputSecondName">Second Name</label>
+                <input type="text" class="form-control" id="inputSecondName" placeholder="Enter Second Name" ng-model="addCtrl.form.secondName" required>
+            </div>
+
+            <div formArrayName="subjects" class="form-group">
+                <h3>Subjects</h3>
+                <label for="name1">Subject Name</label>
+                <input type="text" name="name1" [(ngModel)]="name1" class="form-control" ng-model="addCtrl.form.subject[0].name" value="Agile" required>
+                <label for="confidence1">Trainee Confidence</label>
+                <input type="number" name="confidence1" [(ngModel)]="confidence1" class="form-control" ng-model="addCtrl.form.subject[0].confidence" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="name2">Subject Name</label>
+                    <input type="text" name="name2" [(ngModel)]="name2" class="form-control" ng-model="addCtrl.form.subject[1].name" value="Java SE">
+                    <label for="confidence2">Trainee Confidence</label>
+                    <input type="number" name="confidence2" [(ngModel)]="confidence2" ng-model="addCtrl.form.subject[1].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name3">Subject Name</label>
+                    <input type="text" name="name3" [(ngModel)]="name3" class="form-control" ng-model="addCtrl.form.subject[2].name" value="Databases">
+                    <label for="confidence3">Trainee Confidence</label>
+                    <input type="number" name="confidence3" [(ngModel)]="confidence3" ng-model="addCtrl.form.subject[2].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name4">Subject Name</label>
+                    <input type="text" name="name4" [(ngModel)]="name4" class="form-control" ng-model="addCtrl.form.subject[3].name" value="JavaScript">
+                    <label for="confidence4">Trainee Confidence</label>
+                    <input type="number" name="confidence4" [(ngModel)]="confidence4" ng-model="addCtrl.form.subject[3].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name5">Subject Name</label>
+                    <input type="text" name="name5" [(ngModel)]="name5" class="form-control" ng-model="addCtrl.form.subject[4].name" value="Continuous Integration">
+                    <label for="confidence5">Trainee Confidence</label>
+                    <input type="number" name="confidence5" [(ngModel)]="confidence5" ng-model="addCtrl.form.subject[4].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name6">Subject Name</label>
+                    <input type="text" name="name6" [(ngModel)]="name6" class="form-control" ng-model="addCtrl.form.subject[5].name" value="Automated testing">
+                    <label for="confidence6">Trainee Confidence</label>
+                    <input type="number" name="confidence6" [(ngModel)]="confidence6" ng-model="addCtrl.form.subject[5].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name7">Subject Name</label>
+                    <input type="text" name="name7" [(ngModel)]="name7" class="form-control" ng-model="addCtrl.form.subject[6].name" value="Python">
+                    <label for="confidence7">Trainee Confidence</label>
+                    <input type="number" name="confidence7" [(ngModel)]="confidence7" ng-model="addCtrl.form.subject[6].confidence" class="form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="name8">Subject Name</label>
+                    <input type="text" name="name8" [(ngModel)]="name8" class="form-control"  ng-model="addCtrl.form.subject[7].name" value="Java EE">
+                    <label for="confidence8">Trainee Confidence</label>
+                    <input type="number" name="confidence8" [(ngModel)]="confidence8" ng-model="addCtrl.form.subject[7].confidence" class="form-control" value="0">
+            </div>
+            {{addCtrl.issue}}
+            <button ng-click="addCtrl.createUser()" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>
